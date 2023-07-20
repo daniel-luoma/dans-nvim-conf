@@ -31,3 +31,25 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
+
+-- Auto toggle between relative and absolute line numbering.
+vim.api.nvim_create_autocmd(
+  { "BufEnter", "FocusGained", "InsertLeave",
+    "TermLeave", "WinEnter", "CmdlineLeave" }, {
+  callback = function()
+    if vim.opt_local.number:get() then
+      vim.opt_local.relativenumber = true
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd(
+  { "BufLeave", "FocusLost", "InsertEnter",
+    "TermEnter", "WinLeave", "CmdlineEnter" }, {
+  callback = function()
+    if vim.opt_local.number:get() then
+      vim.opt_local.relativenumber = false
+    end
+  end,
+})
+
