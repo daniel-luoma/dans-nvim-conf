@@ -10,7 +10,11 @@ M.override = {
     italic = true,
     fg = "teal",
   },
+  ColorColumn = { 
+    bg = "red"
+  },
 }
+
 
 ---@type HLTable
 M.add = {
