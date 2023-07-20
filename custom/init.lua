@@ -16,3 +16,10 @@ vim.opt.textwidth = 79
 vim.opt.colorcolumn = {80, 120}
 vim.opt.breakindent = true
 vim.opt.linebreak = true
+
+-- Built-in completion & tag search
+vim.opt.completeopt:append{"menuone", "noinsert"}
+
+-- spell check
+vim.opt.spell = true
+vim.opt.spelllang = {"en_us"}

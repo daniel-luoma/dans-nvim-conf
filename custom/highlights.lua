@@ -10,8 +10,12 @@ M.override = {
     italic = true,
     fg = "teal",
   },
-  ColorColumn = { 
+  ColorColumn = {
     bg = "red"
+  },
+  SpellBad = {
+    underline = true,
+    fg = "red",
   },
 }
 
