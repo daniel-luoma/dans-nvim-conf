@@ -23,3 +23,11 @@ vim.opt.completeopt:append{"menuone", "noinsert"}
 -- spell check
 vim.opt.spell = true
 vim.opt.spelllang = {"en_us"}
+
+-- highlight the text being yanked
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+  callback = function()
+    vim.highlight.on_yank { timeout = 500 }
+  end,
+})
+
