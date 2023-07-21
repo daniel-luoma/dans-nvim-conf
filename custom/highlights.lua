@@ -11,7 +11,7 @@ M.override = {
     fg = "teal",
   },
   ColorColumn = {
-    bg = "red"
+    bg = "red",
   },
   SpellBad = {
     underline = true,

@@ -15,3 +15,10 @@ end
 
 -- 
 -- lspconfig.pyright.setup { blabla}
+lspconfig.clangd.setup {
+  cmd = {
+    "clangd",
+    '--query-driver="/home/dan/toolchain/**/*-gcc"',
+    '--compilationDatabasePath="/home/dan/Projects/Active/QWEL/Silex-WDC/build/"',
+  },
+}
